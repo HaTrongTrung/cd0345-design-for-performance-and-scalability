@@ -1,0 +1,28 @@
+﻿**  In this estimation I increased:
+1. Number of ec2 instances and change type of instance type to m5.4xlarge
+2. Change RDS Instance type to db.m2.4xlarge
+3. Route 53: Number of Elastic Network Interfaces (from 2 to 4)
+
+Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,19833.93,238007.16,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+My Estimate,US East (N. Virginia),Increased Estimate,Amazon Route 53,0,377.5,4530.00,USD,,"Hosted Zones (1), Number of Elastic Network Interfaces (4)"
+My Estimate,US East (N. Virginia),Initial Estimate,Application Load Balancer,0,1492.85,17914.20,USD,,Number of Application Load Balancers (2)
+My Estimate,US East (N. Virginia),Initial Estimate,S3 Standard,0,471.04,5652.48,USD,,S3 Standard storage (20 TB per month)
+My Estimate,US East (N. Virginia),Initial Estimate,Data Transfer,0,0,0.00,USD,,
+My Estimate,US East (N. Virginia),Increased Estimate,Amazon RDS for MySQL,0,5166.24,61994.88,USD,,"Storage amount (2 TB), Storage for each RDS instance (General Purpose SSD (gp2)), Nodes (2), Instance type (db.m2.4xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (2 TB)"
+My Estimate,US East (N. Virginia),Increased Estimate,Amazon EC2 ,0,9358,112296.00,USD,,"Tenancy (Dedicated Instances), Operating system (Linux), Workload (Consistent, Number of instances: 20), Advance EC2 instance (m5.4xlarge), Pricing strategy ( 1yr  No Upfront), Enable monitoring (disabled), EBS Storage amount (100 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (N. Virginia),Initial Estimate,Amazon CloudFront,0,117.52,1410.24,USD,,"Data transfer out to internet (1024 GB per month), Data transfer out to origin (524 GB per month), Number of requests (HTTPS) (20000000 per month)"
+My Estimate,US East (N. Virginia),Initial Estimate,VPN Connection,0,1115,13380.00,USD,,"Working days per month (30), Number of Site-to-Site VPN Connections (2), Number of subnet associations (4)"
+My Estimate,US East (N. Virginia),Initial Estimate,Network Address Translation (NAT) Gateway,0,157.86,1894.32,USD,,Number of NAT Gateways (2)
+Global,All,Business support plan,AWS Support,0,1577.92 ,18935.04,USD,"Supports 24/7 phone, chat, and email access to Cloud Support Engineers for unlimited contacts, with and a response time of less than 1 hour."
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
